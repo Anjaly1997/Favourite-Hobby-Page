@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking-my hobby</title>
+    <style>
+        body{
+            background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/259/original/green-background.jpg?1687115352);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-family: "PT Mono", monospace;
+        }
+        h2{
+            text-align: center;
+            font-family: "PT Mono", monospace;
+            font-size:x-large;
+        }
+        img{
+            max-height: 100%;
+            max-width: 100%;
+            display: block;
+            border-radius: 20px;
+            background-size: contain;
+           
+        }
+        button{
+            display: block;
+            margin: 30px auto;
+            background: #1e2d30;
+            font-weight: bolder;
+            text-transform: uppercase;
+            color:white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            border: 2px solid #1e2d30;
+            font-size: 16px;
+            border-radius: 30px;
+            padding: 15px 25px;
+            transition: all 200ms ease-in-out;
+           
+        }
+        button:hover{
+            border: 2px solid #1e2d30;
+            background: transparent;
+            font-size: 16px;
+            color:#1e2d30;
+            cursor: pointer;
+        }
+        footer{
+            text-align: center;
+            margin: 10px 0;
+
+        }
+        p{
+            text-align: justify;
+            line-height: 1.2;
+            font-style: italic;
+            font-size: 18px;
+    line-height: 30px;
+    font-family: "PT Mono", monospace;
+        }
+        footer
+        {color: white;
+            text-align: center;
+    display: block;
+    font-size: 16px;
+    font-family: "PT Mono", monospace;
+        }
+        a{
+            color: #1a312d;
+            font-size: large;
+            font-family: "PT Mono", monospace;
+        }
+        .container{
+            max-width: 600px;
+            background:  rgb(216, 224, 216);
+            padding:10px 30px 30px 30px;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        .dark-theme-button{
+            border: none;
+            background: white;
+            color:#1e2d30;
+            margin-top: 30px;
+
+        }
+        .dark-theme-button:hover{
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        .hiking-intro-image{
+            transition: all 150ms ease-in-out;
+            
+        }
+        .hiking-intro-image:hover{
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+        .grid{
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            
+            gap: 15px;
+        }
+        .grid img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+        .grid img:hover{
+            transform: scale(1.5);
+        }
+        .footer-link{
+            color: white;
+        }
+        .dark{
+            background: #1a312d;
+            color: white;
+        }
+        .dark .container{	
+            background: rgba(255, 255, 255, 0.08);
+           
+        }
+.dark button{
+    border:  2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.dark button:hover{
+    border: none;
+            background: white;
+            color:#1e2d30;
+}
+.dark a{
+    color: white;
+}
+    </style>
+   
+</head>
+<body >
+    <button class="dark-theme-button">DARK THEME</button>
+    <div class="container">  
+        <h1>HIKING 🏔 </h1>
+        <h2>My favorite type of Hobby 💚</h2>   
+        <hr>  
+        <a href="https://en.wikipedia.org/wiki/Hiking" target="_blank"><img class="hiking-intro-image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/143/original/hiking1.jpg?1687028341" alt=""></a>
+        <hr>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/183/original/HIKING-4.jpg?1687074902" alt="">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/182/original/HIKING_3.jpg?1687074889" alt="">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/181/original/HIKING-2.jpg?1687074875" alt="">
+           <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/265/original/hiking444.jpg?1687117471" alt="">
+        </div>
+ 
+        
+        <p><strong>Hiking</strong> is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century. Religious pilgrimages have existed much longer but they involve walking long distances for a spiritual purpose associated with specific religions.</p>
+        <a href=""><strong>📖 Know more about hiking</strong> </a>
+        <button>Go Hiking</button>
+    </div>
+    <footer>Coded by 👩🏼‍💻 <a href="" class="footer-link">Anjaly Soman </a> using HTML, CSS and Javascript</footer>
+    <script>
+        function changeTheme(){
+            let body = document.querySelector('body');
+            if(body.classList.contains('dark')){
+                body.classList.remove('dark');
+            }
+            else{body.classList.add('dark');}
+            
+        }
+        let theme = document.querySelector('.dark-theme-button');
+        theme.addEventListener('click',changeTheme)
+    </script>
+</body>
+</html>
